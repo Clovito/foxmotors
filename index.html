@@ -269,6 +269,9 @@
         </div>
     </section>
 
+# Gerar arquivo HTML com formulário compatível com Netlify Forms
+
+netlify_form_html = """
 <!-- Contact Section -->
 <section id="contact" class="py-16 bg-gray-900 text-white">
   <div class="container mx-auto px-4">
@@ -284,10 +287,6 @@
         <h3 class="text-2xl font-bold mb-6">Agende seu serviço</h3>
         <form name="agenda" method="POST" data-netlify="true" class="space-y-4">
           <input type="hidden" name="form-name" value="agenda">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_next" value="https://clovito.github.io/foxmotors/obrigado.html">
-          <input type="hidden" name="_template" value="table">
-          <input type="text" name="_honey" style="display:none">
 
           <div>
             <label for="name" class="block mb-1">Nome</label>
@@ -345,6 +344,13 @@
     </div>
   </div>
 </section>
+"""
+
+netlify_file_path = "/mnt/data/formulario_agendamento_netlify.html"
+with open(netlify_file_path, "w", encoding="utf-8") as f:
+    f.write(netlify_form_html)
+
+netlify_file_path
 
     <!-- Brands Section -->
     <section class="py-12 bg-gray-100">

@@ -280,58 +280,46 @@
             <div class="flex flex-col lg:flex-row gap-10">
                 <div class="lg:w-1/2">
                     <h3 class="text-2xl font-bold mb-6">Agende seu serviço</h3>
-                   <form action="https://formsubmit.co/clovitojapan@gmail.com" method="POST" class="space-y-4">
-  
-  <!-- Proteções contra spam -->
-  <input type="hidden" name="_captcha" value="false">
-  <input type="text" name="_honey" style="display:none">
-  
-  <!-- Redirecionamento para a página de obrigado -->
-  <input type="hidden" name="_next" value="https://clovito.github.io/foxmotors/obrigado.html">
-
-  <div>
-    <label for="name" class="block mb-1">Nome</label>
-    <input type="text" id="name" name="nome" required class="w-full px-4 py-2 rounded bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-500">
-  </div>
-
-  <div>
-    <label for="phone" class="block mb-1">Telefone</label>
-    <input type="tel" id="phone" name="telefone" required class="w-full px-4 py-2 rounded bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-500">
-  </div>
-
-  <div>
-    <label for="email" class="block mb-1">E-mail</label>
-    <input type="email" id="email" name="email" required class="w-full px-4 py-2 rounded bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-500">
-  </div>
-
-  <div>
-    <label for="service" class="block mb-1">Serviço desejado</label>
-    <select id="service" name="serviço_desejado" required class="w-full px-4 py-2 rounded bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-500">
-      <option value="">Selecione um serviço</option>
-      <option value="Preparação">Preparação</option>
-      <option value="Troca de óleo e filtros">Troca de óleo e filtros</option>
-      <option value="Suspensão e Direção">Suspensão e Direção</option>
-      <option value="Manutenção de Freios">Manutenção de Freios</option>
-      <option value="Auto Elétrica">Auto Elétrica</option>
-      <option value="Manutenção de Ar Condicionado">Manutenção de Ar Condicionado</option>
-      <option value="Recarga de Gás">Recarga de Gás</option>
-      <option value="Reparo de Pneus">Reparo de Pneus</option>
-      <option value="Alinhamento">Alinhamento</option>
-      <option value="Troca de Pneus">Troca de Pneus</option>
-      <option value="Shaken">Shaken</option>
-      <option value="Seguro">Seguro</option>
-      <option value="Transferência">Transferência</option>
-      <option value="Outro">Outro</option>
-    </select>
-  </div>
-
-  <div>
-    <label for="message" class="block mb-1">Mensagem</label>
-    <textarea id="message" name="mensagem" rows="4" class="w-full px-4 py-2 rounded bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-500"></textarea>
-  </div>
-
-  <button type="submit" class="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-3 px-6 rounded-full transition">Enviar Mensagem</button>
-</form>
+                   <form class="space-y-4">
+                        <div>
+                            <label for="name" class="block mb-1">Nome</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 rounded bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                        </div>
+                        <div>
+                            <label for="phone" class="block mb-1">Telefone</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-2 rounded bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                        </div>
+                        <div>
+                            <label for="email" class="block mb-1">E-mail</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 rounded bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                        </div>
+                        <div>
+                            <label for="service" class="block mb-1">Serviço desejado</label>
+                            <select id="service" class="w-full px-4 py-2 rounded bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                                <option value="">Selecione um serviço</option>
+                                <option value="mechanic">Preparação</option>
+                                <option value="tires">Troca de óleo e filtros</option>
+                                <option value="electrical">Suspensão e Direção</option>
+                                <option value="alignment">Manutenção de Freios</option>
+                                <option value="other">Auto Elétrica</option>
+                                <option value="">Manutenção de Ar Condicionado</option>
+                                <option value="mechanic">Recarga de Gás</option>
+                                <option value="tires">Reparo de Pneus</option>
+                                <option value="electrical">Alinhamento</option>
+                                <option value="alignment">Troca de Pneus</option>
+                                <option value="other">Shaken</option>
+                                <option value="other">Seguro</option>
+                                <option value="other">Transferência</option>
+                                <option value="other">Outro</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="message" class="block mb-1">Mensagem</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 rounded bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-500"></textarea>
+                        </div>
+                        <button type="submit" class="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-3 px-6 rounded-full transition">Enviar Mensagem</button>
+                    </form>
+                </div>
                 
                 <div class="lg:w-1/2">
                     <h3 class="text-2xl font-bold mb-6">Nossa Localização</h3>

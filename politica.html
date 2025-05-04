@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fox Motors - Oficina Mecânica e Borracharia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            background-size: cover;
+            background-position: center;
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        .testimonial-card:hover {
+            transform: scale(1.03);
+        }
+        .map-container {
+            height: 400px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-100">
+    <!-- Header/Navbar -->
+    <header class="bg-gray-900 text-white sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="logo-container">
+                <img src="logofox.png" alt="Fox Motors" class="logo">
+              </div>
+              
+            <nav class="hidden md:flex space-x-8">
+                <a href="index.html" class="hover:text-yellow-500 transition">Home</a>
+                <a href="index.html" class="hover:text-yellow-500 transition">Serviços</a>
+                <a href="index.html" class="hover:text-yellow-500 transition">Empresa</a>
+                <a href="#testimonials" class="hover:text-yellow-500 transition">Depoimentos</a>
+                <a href="#contact" class="hover:text-yellow-500 transition">Contato</a>
+            </nav>
+            <div class="hidden md:block">
+                <a href="#contact" class="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-2 px-6 rounded-full transition">Agendar Serviço</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800 px-4 py-2">
+            <div class="flex flex-col space-y-3">
+                <a href="#home" class="hover:text-yellow-500 transition">Início</a>
+                <a href="#services" class="hover:text-yellow-500 transition">Serviços</a>
+                <a href="#about" class="hover:text-yellow-500 transition">Sobre</a>
+                <a href="#testimonials" class="hover:text-yellow-500 transition">Depoimentos</a>
+                <a href="#contact" class="hover:text-yellow-500 transition">Contato</a>
+                <a href="#contact" class="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-2 px-4 rounded-full text-center transition">Agendar Serviço</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg text-white py-20 md:py-32">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Seu carro em boas mãos</h1>
+            <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto">Serviços mecânicos e borracharia de alta qualidade com garantia e preço justo.</p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="#contact" class="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-3 px-8 rounded-full transition">Agendar Serviço</a>
+                <a href="#services" class="border-2 border-white hover:bg-white hover:text-gray-900 font-bold py-3 px-8 rounded-full transition">Nossos Serviços</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Banner -->
+    <div class="bg-red-600 text-white py-3">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
+            <div class="flex items-center mb-2 md:mb-0">
+                <i class="fas fa-exclamation-triangle text-2xl mr-3"></i>
+                <span class="font-bold">EMERGÊNCIA 24H</span>
+            </div>
+            <div class="flex items-center">
+                <i class="fas fa-phone-alt mr-2"></i>
+                <span class="text-xl font-bold">+ 81 090 4256 2903</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center">
+                
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Política de Privacidade</h2>
+                    <ol class="space-y-6">
+
+                        <li class="flex items-start">
+                          <span class="flex items-center justify-center h-10 aspect-square rounded-full bg-green-600 text-white font-bold mr-4">1</span>
+                          <div><strong>Política de Privacidade</strong></div>
+                        </li>
+                      
+                        <li class="flex items-start">
+                          <span class="flex items-center justify-center h-10 aspect-square rounded-full bg-green-600 text-white font-bold mr-4">2</span>
+                          <div>A sua privacidade é importante para nós. É política do fox motors respeitar a sua privacidade em relação a qualquer informação sua que possamos coletar no site fox motors, e outros sites que possuímos e operamos.</div>
+                        </li>
+                      
+                        <li class="flex items-start">
+                          <span class="flex items-center justify-center h-10 aspect-square rounded-full bg-green-600 text-white font-bold mr-4">3</span>
+                          <div>Solicitamos informações pessoais apenas quando realmente precisamos delas para lhe fornecer um serviço. Fazemo-lo por meios justos e legais, com o seu conhecimento e consentimento. Também informamos por que estamos coletando e como será usado.</div>
+                        </li>
+                      
+                        <li class="flex items-start">
+                          <span class="flex items-center justify-center h-10 aspect-square rounded-full bg-green-600 text-white font-bold mr-4">4</span>
+                          <div>Apenas retemos as informações coletadas pelo tempo necessário para fornecer o serviço solicitado. Quando armazenamos dados, protegemos dentro de meios comercialmente aceitáveis ​​para evitar perdas e roubos, bem como acesso, divulgação, cópia, uso ou modificação não autorizados.</div>
+                        </li>
+                      
+                        <li class="flex items-start">
+                          <span class="flex items-center justify-center h-10 aspect-square rounded-full bg-green-600 text-white font-bold mr-4">5</span>
+                          <div>Não compartilhamos informações de identificação pessoal publicamente ou com terceiros, exceto quando exigido por lei.</div>
+                        </li>
+                      
+                        <li class="flex items-start">
+                          <span class="flex items-center justify-center h-10 aspect-square rounded-full bg-green-600 text-white font-bold mr-4">6</span>
+                          <div>O nosso site pode ter links para sites externos que não são operados por nós. Esteja ciente de que não temos controle sobre o conteúdo e práticas desses sites e não podemos aceitar responsabilidade por suas respectivas políticas de privacidade.</div>
+                        </li>
+                      
+                        <li class="flex items-start">
+                          <span class="flex items-center justify-center h-10 aspect-square rounded-full bg-green-600 text-white font-bold mr-4">7</span>
+                          <div>Você é livre para recusar a nossa solicitação de informações pessoais, entendendo que talvez não possamos fornecer alguns dos serviços desejados.</div>
+                        </li>
+                      
+                        <li class="flex items-start">
+                          <span class="flex items-center justify-center h-10 aspect-square rounded-full bg-green-600 text-white font-bold mr-4">8</span>
+                          <div>O uso continuado de nosso site será considerado como aceitação de nossas práticas em torno de privacidade e informações pessoais. Se você tiver alguma dúvida sobre como lidamos com dados do usuário e informações pessoais, entre em contacto connosco.</div>
+                        </li>
+                      
+                        <li class="flex items-start">
+                          <span class="flex items-center justify-center h-10 aspect-square rounded-full bg-green-600 text-white font-bold mr-4">9</span>
+                          <div>O serviço Google AdSense que usamos para veicular publicidade usa um cookie DoubleClick para veicular anúncios mais relevantes em toda a Web e limitar o número de vezes que um determinado anúncio é exibido para você.</div>
+                        </li>
+                      
+                        <li class="flex items-start">
+                          <span class="flex items-center justify-center h-10 aspect-square rounded-full bg-green-600 text-white font-bold mr-4">10</span>
+                          <div>Para mais informações sobre o Google AdSense, consulte as FAQs oficiais sobre privacidade do Google AdSense.</div>
+                        </li>
+                      
+                        <li class="flex items-start">
+                          <span class="flex items-center justify-center h-10 aspect-square rounded-full bg-green-600 text-white font-bold mr-4">11</span>
+                          <div>Utilizamos anúncios para compensar os custos de funcionamento deste site e fornecer financiamento para futuros desenvolvimentos. Os cookies de publicidade comportamental usados ​​por este site foram projetados para garantir que você forneça os anúncios mais relevantes sempre que possível, rastreando anonimamente seus interesses e apresentando coisas semelhantes que possam ser do seu interesse.</div>
+                        </li>
+                      
+                        <li class="flex items-start">
+                          <span class="flex items-center justify-center h-10 aspect-square rounded-full bg-green-600 text-white font-bold mr-4">12</span>
+                          <div>Vários parceiros anunciam em nosso nome e os cookies de rastreamento de afiliados simplesmente nos permitem ver se nossos clientes acessaram o site através de um dos sites de nossos parceiros, para que possamos creditá-los adequadamente e, quando aplicável, permitir que nossos parceiros afiliados ofereçam qualquer promoção que pode fornecê-lo para fazer uma compra.</div>
+                        </li>
+                      
+                        <li class="flex items-start">
+                          <span class="flex items-center justify-center h-10 aspect-square rounded-full bg-green-600 text-white font-bold mr-4">13</span>
+                          <div><strong>Compromisso do Usuário</strong></div>
+                        </li>
+                      
+                        <li class="flex items-start">
+                          <span class="flex items-center justify-center h-10 aspect-square rounded-full bg-green-600 text-white font-bold mr-4">14</span>
+                          <div>O usuário se compromete a fazer uso adequado dos conteúdos e da informação que o fox motors oferece no site e com caráter enunciativo, mas não limitativo:</div>
+                        </li>
+                      
+                        <li class="flex items-start">
+                          <span class="flex items-center justify-center h-10 aspect-square rounded-full bg-green-600 text-white font-bold mr-4">15</span>
+                          <div>A) Não se envolver em atividades que sejam ilegais ou contrárias à boa fé a à ordem pública;</div>
+                        </li>
+                      
+                        <li class="flex items-start">
+                          <span class="flex items-center justify-center h-10 aspect-square rounded-full bg-green-600 text-white font-bold mr-4">16</span>
+                          <div>B) Não difundir propaganda ou conteúdo de natureza racista, xenofóbica, jogos de sorte ou azar, qualquer tipo de pornografia ilegal, de apologia ao terrorismo ou contra os direitos humanos;</div>
+                        </li>
+                      
+                        <li class="flex items-start">
+                          <span class="flex items-center justify-center h-10 aspect-square rounded-full bg-green-600 text-white font-bold mr-4">17</span>
+                          <div>C) Não causar danos aos sistemas físicos (hardwares) e lógicos (softwares) do fox motors, de seus fornecedores ou terceiros, para introduzir ou disseminar vírus informáticos ou quaisquer outros sistemas de hardware ou software que sejam capazes de causar danos anteriormente mencionados.</div>
+                        </li>
+                      
+                        <li class="flex items-start">
+                          <span class="flex items-center justify-center h-10 aspect-square rounded-full bg-green-600 text-white font-bold mr-4">18</span>
+                          <div><strong>Mais informações</strong></div>
+                        </li>
+                      
+                        <li class="flex items-start">
+                          <span class="flex items-center justify-center h-10 aspect-square rounded-full bg-green-600 text-white font-bold mr-4">19</span>
+                          <div>Esperemos que esteja esclarecido e, como mencionado anteriormente, se houver algo que você não tem certeza se precisa ou não, geralmente é mais seguro deixar os cookies ativados, caso interaja com um dos recursos que você usa em nosso site.</div>
+                        </li>
+                      
+                        <li class="flex items-start">
+                          <span class="flex items-center justify-center h-10 aspect-square rounded-full bg-green-600 text-white font-bold mr-4">20</span>
+                          <div>Esta política é efetiva a partir de 30 April 2025 02:23</div>
+                        </li>
+                      
+                      </ol>
+                      
+                    <p class="text-gray-600 mb-6"></p>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="">
+                                <i class=""></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900"></h4>
+                                <p class="text-gray-600"></p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="">
+                                <i class=""></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900"></h4>
+                                <p class="text-gray-600"></p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="">
+                                <i class=""></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900"></h4>
+                                <p class="text-gray-600"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">O que nossos clientes dizem</h2>
+                <div class="w-20 h-1 bg-yellow-500 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card bg-gray-100 p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-gray-300 mr-4 overflow-hidden">
+                            <img src="clovis.jpg" alt="Cliente" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Clovis Francisco</h4>
+                            <div class="flex text-yellow-500">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Levo meu carro na Fox Motors há anos e sempre saio satisfeito. O serviço é rápido, o preço justo e o atendimento excelente. Recomendo!"</p>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card bg-gray-100 p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-gray-300 mr-4 overflow-hidden">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Cliente" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Ana Oliveira</h4>
+                            <div class="flex text-yellow-500">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Fui atendida com urgência quando furou meu pneu. Além de resolverem rápido, me explicaram tudo com paciência. Adorei o atendimento!"</p>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card bg-gray-100 p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-gray-300 mr-4 overflow-hidden">
+                            <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Cliente" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Roberto Santos</h4>
+                            <div class="flex text-yellow-500">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Precisava de uma revisão completa no meu carro e fui muito bem atendido. Fizeram um diagnóstico completo e me apresentaram um orçamento detalhado."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-900 text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Entre em Contato</h2>
+                <div class="w-20 h-1 bg-yellow-500 mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row gap-10">
+                <div class="lg:w-1/2">
+                    <h3 class="text-2xl font-bold mb-6">Agende seu serviço</h3>
+                    <form class="space-y-4">
+                        <div>
+                            <label for="name" class="block mb-1">Nome</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 rounded bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                        </div>
+                        <div>
+                            <label for="phone" class="block mb-1">Telefone</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-2 rounded bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                        </div>
+                        <div>
+                            <label for="email" class="block mb-1">E-mail</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 rounded bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                        </div>
+                        <div>
+                            <label for="service" class="block mb-1">Serviço desejado</label>
+                            <select id="service" class="w-full px-4 py-2 rounded bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                                <option value="">Selecione um serviço</option>
+                                <option value="mechanic">Mecânica Geral</option>
+                                <option value="tires">Borracharia</option>
+                                <option value="electrical">Elétrica Automotiva</option>
+                                <option value="alignment">Alinhamento/Balanceamento</option>
+                                <option value="other">Outro</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="message" class="block mb-1">Mensagem</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 rounded bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-500"></textarea>
+                        </div>
+                        <button type="submit" class="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-3 px-6 rounded-full transition">Enviar Mensagem</button>
+                    </form>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <h3 class="text-2xl font-bold mb-6">Nossa Localização</h3>
+                    <div class="map-container rounded-lg overflow-hidden shadow-lg mb-6">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3264.509079645425!2d137.16181577621143!3d35.09399696200811!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6004a06f47c8cdbb%3A0x1937a9ded7ba42ad!2z44CSNDcxLTAwNzkgQWljaGksIFRveW90YSwgSmlubmFrYWNoxY0sIDItY2jFjW1l4oiS77yR77yX4oiSMw!5e0!3m2!1sen!2sjp!4v1745934064497!5m2!1sen!2sjp" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="bg-yellow-500 p-2 rounded-full mr-4">
+                                <i class="fas fa-map-marker-alt text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Endereço</h4>
+                                <p class="text-gray-300">〒471-0079 Aichi, Toyota, Jinnakachô, 2-chome- 17-3</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-yellow-500 p-2 rounded-full mr-4">
+                                <i class="fas fa-phone-alt text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Telefone</h4>
+                                <p class="text-gray-300">090 4256 2903</p>
+                                <p class="text-gray-300">Emergência 24h: 090 4256 2903</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-yellow-500 p-2 rounded-full mr-4">
+                                <i class="fas fa-envelope text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">E-mail</h4>
+                                <p class="text-gray-300">contato@foxmotors.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-yellow-500 p-2 rounded-full mr-4">
+                                <i class="fas fa-clock text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Horário de Funcionamento</h4>
+                                <p class="text-gray-300">Terça a Sexta: 10h às 20h</p>
+                                <p class="text-gray-300">Sábado: 10h às 20h</p>
+                                <p class="text-gray-300">Domingo: 10h às 17h</p>
+                                <p class="text-gray-300">Plantão 24h para emergências</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brands Section -->
+    <section class="py-12 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h3 class="text-center text-2xl font-bold text-gray-900 mb-8">Trabalhamos com as melhores marcas</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
+                <div class="flex items-center justify-center p-4 bg-white rounded-lg shadow-sm">
+                    <img src="toyota.png" alt="Toyota" class="h-12 object-contain">
+                </div>
+                <div class="flex items-center justify-center p-4 bg-white rounded-lg shadow-sm">
+                    <img src="suzuki.png" alt="Suzuki" class="h-12 object-contain">
+                </div>
+                <div class="flex items-center justify-center p-4 bg-white rounded-lg shadow-sm">
+                    <img src="honda.png" alt="Castrol" class="h-12 object-contain">
+                </div>
+                <div class="flex items-center justify-center p-4 bg-white rounded-lg shadow-sm">
+                    <img src="mazda.png" alt="Bosch" class="h-12 object-contain">
+                </div>
+                <div class="flex items-center justify-center p-4 bg-white rounded-lg shadow-sm">
+                    <img src="subaru.png" alt="Volkswagen" class="h-12 object-contain">
+                </div>
+                <div class="flex items-center justify-center p-4 bg-white rounded-lg shadow-sm">
+                    <img src="nissan.png" alt="Ford" class="h-12 object-contain">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-10">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="logo-container">
+                        <img src="logofox.png" alt="Fox Motors" class="logo">
+                      </div>
+                    <p class="text-gray-400">Sua oficina mecânica e borracharia de confiança, oferecendo serviços de qualidade há mais de 15 anos.</p>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="text-gray-400 hover:text-yellow-500 transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-yellow-500 transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-yellow-500 transition"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Links Rápidos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-yellow-500 transition">Home</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-yellow-500 transition">Serviços</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-yellow-500 transition">Sobre Nós</a></li>
+                        <li><a href="#testimonials" class="text-gray-400 hover:text-yellow-500 transition">Depoimentos</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-yellow-500 transition">Contato</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Serviços</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-500 transition">Mecânica Geral</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-500 transition">Borracharia</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-500 transition">Elétrica Automotiva</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-500 transition">Alinhamento</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-yellow-500 transition">Balanceamento</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Newsletter</h4>
+                    <p class="text-gray-400 mb-4">Assine nossa newsletter para receber promoções e dicas de manutenção.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Seu e-mail" class="px-4 py-2 rounded-l bg-gray-700 text-white focus:outline-none w-full">
+                        <button type="submit" class="bg-yellow-500 hover:bg-yellow-600 text-gray-900 px-4 py-2 rounded-r"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2023 Fox Motors. Todos os direitos reservados.</p>
+                <div class="flex space-x-6">
+                    <a href="termos.html" class="text-gray-400 hover:text-yellow-500 text-sm transition">Termos de Serviço</a>
+                    <a href="politica.html" class="text-gray-400 hover:text-yellow-500 text-sm transition">Política de Privacidade</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/819042562903" target="_blank" class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition transform hover:scale-110">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+        
+        // Form submission (example)
+        const contactForm = document.querySelector('form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Obrigado pelo seu contato! Entraremos em contato em breve.');
+                this.reset();
+            });
+        }
+    </script>
+</body>
+</html>
